@@ -1,8 +1,4 @@
----
-layout: default
-title: Home
-page_name: blog
----
+
 
 <div id='index'>
 {% for post in paginator.posts %}
@@ -15,7 +11,11 @@ page_name: blog
   </div>
 {% endfor %}
 </div>
-
+---
+layout: default
+title: Home
+page_name: blog
+---
 <div class='paging'>
   {% if paginator.next_page %}
     <a href='/Demo/page{{paginator.next_page}}' class='older'>Older Posts</a>
