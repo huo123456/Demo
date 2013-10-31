@@ -7,7 +7,7 @@ page_name: blog
 <div id='index'>
 {% for post in paginator.posts %}
   <div class="post">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2><small class="meta">Posted {{ post.date | date:"%B %d, %Y" }} |>><a id="comment" href='{{ post.url }}#disqus_thread'>View Comments</a></small>
+    <h2><a href="/Demo/{{ post.url }}">{{ post.title }}</a></h2><small class="meta">Posted {{ post.date | date:"%B %d, %Y" }} |>><a id="comment" href='/Demo/{{ post.url }}#disqus_thread'>View Comments</a></small>
 
     {{ post.content }}
 
@@ -18,13 +18,13 @@ page_name: blog
 
 <div class='paging'>
   {% if paginator.next_page %}
-    <a href='/page{{paginator.next_page}}' class='older'>Older Posts</a>
+    <a href='/Demo/page{{paginator.next_page}}' class='older'>Older Posts</a>
   {% endif %}
 {% if paginator.previous_page %}
   {% if paginator.previous_page == 1 %}
-    <a href='/' class='newer'>Newer Posts</a>
+    <a href='/Demo/' class='newer'>Newer Posts</a>
   {% else %}
-    <a href='/page{{paginator.previous_page}}' class='newer'>Newer Posts</a>
+    <a href='/Demo/page{{paginator.previous_page}}' class='newer'>Newer Posts</a>
   {% endif %}
 {% endif %}
   
